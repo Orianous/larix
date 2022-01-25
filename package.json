@@ -1,0 +1,56 @@
+{
+  "name": "@larix/monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn workspaces foreach run --topological -p -i build",
+    "clean": "yarn workspaces foreach run -p -i clean",
+    "test:unit": "jest",
+    "test": "yarn tests && yarn lint",
+    "test:lint": "eslint --fix",
+    "lint": "yarn test:lint **/*.ts",
+    "watch": "yarn workspaces foreach run --topological -p -i watch",
+    "build:tsc": "pnpify tsc -p"
+  },
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@babel/register": "^7.6.0",
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
+    "@yarnpkg/pnpify": "2.0.0-rc.6",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-jest": "^22.19.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.4"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "tslint --fix -c tslint.json",
+      "git add"
+    ],
+    "*.{json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "parser": "babel"
+  }
+}

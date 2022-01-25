@@ -1,0 +1,38 @@
+{
+  "name": "//{slug//}",
+  "version": "0.1.0",
+  "main": "./src/index.ts",
+  "private": true,
+  "!presets": ["ts", "babel", "react", "react-apollo", "graphql"],
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "test": "jest",
+    "postinstall": "expo-yarn-workspaces postinstall"
+  },
+  "dependencies": {
+    "apollo-boost": "0.4.4",
+    "expo": "35.0.0",
+    "expo-constants": "^7.0.0",
+    "expo-file-system": "^7.0.0",
+    "expo-font": "^7.0.0",
+    "expo-image-picker": "^7.0.0",
+    "expo-keep-awake": "^7.0.0",
+    "expo-localization": "^7.0.0",
+    "expo-permissions": "^7.0.0",
+    "expo-secure-store": "^7.0.0",
+    "expo-web-browser": "^7.0.1",
+    "expo-yarn-workspaces": "1.2.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz"
+  },
+  "devDependencies": {
+    "@types/expo__vector-icons": "9.0.1",
+    "@types/react-native": "0.60.22",
+    "babel-plugin-transform-inline-environment-variables": "0.4.3",
+    "exp": "57.2.1",
+    "expo-cli": "3.4.1",
+    "metro-minify-terser": "0.56.3",
+    "xdl": "53.7.4"
+  }
+}

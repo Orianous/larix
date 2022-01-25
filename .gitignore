@@ -1,0 +1,9 @@
+/.history
+/.npmrc
+node_modules
+/packages/**/lib
+package-lock.json
+.idea
+.npmrc
+*.log
+

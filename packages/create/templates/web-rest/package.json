@@ -1,0 +1,14 @@
+{
+  "name": "//{slug//}",
+  "version": "0.1.0",
+  "private": true,
+  "!presets": ["ts", "babel", "react", "web"],
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}

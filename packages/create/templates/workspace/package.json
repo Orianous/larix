@@ -1,0 +1,17 @@
+{
+  "name": "//{slug//}",
+  "private": true,
+  "scripts": {
+    "build": "lerna run build --stream",
+    "start": "lerna run start --stream",
+    "android": "lerna run android --stream",
+    "ios": "lerna run ios --stream",
+    "test": "lerna run test --stream"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "3.18.3"
+  }
+}
